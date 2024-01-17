@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/your/minified/style.css">
+    <link rel="icon" type="image/png" href="path/to/your/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=P22+Mackinac+Pro:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Eudoxus+Sans:wght@400&display=swap">
+    <title>Custom Page</title>
+    <style>
+
+/* General Styles */
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Eudoxus Sans', sans-serif; /* Fallback font */
+    font-size: 14px;
+    color: black;
+    background-color: #FFF7F2;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #fff8f2a8;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: background 0.3s;
+    top: 0;
+    margin: 0;
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background:#25D366 ;
+    /* background: linear-gradient(45deg, #ff0000, #ff8c00); */
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #931D96;
+}
+
+button {
+    background: linear-gradient(78deg, #861E85 -4.32%, #F55AA3 46.54%, #64C89E 95.79%);
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 15px;
+    width: 215px;
+    height: 65px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    /* background: linear-gradient(45deg, #ff8c00, #ff0000); */
+    background: #931D96;
+}
+
+/* Section Styles */
+.section-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-top: 80px;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+}
+
+.text-container {
+    flex: 1;
+    order: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    opacity: 0;
+    transition: opacity 0.5s;
+    position: relative;
+    z-index: 2;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+.three-div-section .text-container h2{
+    height: 3.05em;
+    -webkit-text-fill-color: transparent;
+    background-color: #36312b;
+    background-image: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #25D366 77%, #25D366);
+    -webkit-background-clip: text;
+    background-clip: text;
+     margin-right: 10px; 
+     padding-right: 10px; 
+    font-family: 'P22 Mackinac Pro', sans-serif;
+    font-weight: bold;
+    font-size: 67px;
+    text-align: center;
+}
+
+.three-div-section .text-container h3{
+    height: 3.05em;
+    -webkit-text-fill-color: transparent;
+    background-color: #36312b;
+    /* background-image: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52); */
+    -webkit-background-clip: text;
+    background-clip: text;
+     margin-right: 10px; 
+     padding-right: 10px; 
+    font-family: 'P22 Mackinac Pro', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+}
+
+
+h2 {
+    font-size: 40px;
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: 'P22 Mackinac Pro', sans-serif;
+    font-weight: bold;
+    text-align: left;
+    color: black
+}
+
+h3 {
+    font-size: 30px;
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: 'P22 Mackinac Pro', sans-serif;
+    font-weight: bold;
+    text-align: left;
+    /* color: black */
+    /* background: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52); */
+
+}
+
+.image-container {
+    position: relative;
+    top: 41px;
+    left: 42px;
+    width: 30%;
+    height: 50vh;
+    z-index: 1;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s ease-in-out;
+    border-radius: 25px;
+    margin: 10px 0;
+    visibility: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-container.active .text-container,
+.section-container.active .image-container {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s, transform 0.8s ease-in-out;
+}
+
+.section-container.active .image-container {
+    transform: scale(1.1);
+}
+
+.section-container.active + .section-container .image-container {
+    opacity: 0;
+    transform: scale(0.8);
+    visibility: hidden;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .section-container {
+        margin-top: 100px;
+    }
+
+    .text-container {
+        padding: 40px;
+    }
+
+    .image-container {
+        width: 40%;
+    }
+
+    .three-div-section img {
+        width: 80%; /* Adjusted for responsiveness */
+    }
+}
+
+@media (min-width: 1024px) {
+    .text-container,
+    .image-container {
+        padding: 60px;
+    }
+}
+
+/* YouTube Section Styles */
+.youtube-section, 
+.three-div-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.three-div-section {
+    margin-top: 137px;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.three-div-section div {
+    width: 100%;
+    margin-bottom: 20px;
+    opacity: 2;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.three-div-section img {
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.img-1 img {
+    position: absolute;
+    top: 100px;
+    left: 0;
+}
+
+.img-2 img {
+    position: absolute;
+    right: 0;
+    top: 100px;
+}
+/* Footer Styles */
+footer {
+    display: flex;
+    text-align: center;
+    padding: 20px;
+    background: #1B0A3D;
+    color: #fff;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.animation-section img {
+    width: 12%;
+    border-radius: 30px;
+    position: absolute;
+}
+.footer-div-1 img {
+    margin-top: -170px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 103%;
+
+}
+.active img{
+    margin-left: 54px;
+    width: 254px;
+    padding-bottom: 144px;
+}
+
+.footer-div-3{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.footer-div-3 form {
+    margin-top: 31px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+.footer-div-2 img {
+    margin-top: 41px;
+    width: 607px;
+    margin-left: 376px;
+}
+
+.footer-div-3 h2 {
+    height: 1.05em;
+    -webkit-text-fill-color: transparent;
+    background-color: #36312b;
+    background-image: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52);
+    -webkit-background-clip: text;
+    background-clip: text;
+     margin-right: 10px; 
+     padding-right: 10px; 
+    font-family: 'P22 Mackinac Pro', sans-serif;
+    font-weight: bold;
+    font-size: 51px;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="top_logo.png" alt="Your Logo">
+    <p>AIBITRAGE</p>
+    <nav>
+        <!-- <a href="#">Home</a> -->
+        <a href="#">ABOUT</a>
+        <a href="#">DOCS</a>
+        <a href="#">DASHBOARD</a>
+    </nav>
+    <button>APP</button>
+</header>
+
+<div class="three-div-section">
+    <div>
+        <div class="img-1">
+            <img src="Left-Side-p-500.png" alt="Image 1">
+            <!-- <img src="Left-Side-p-500.png" alt="Image 1"> -->
+        </div>
+        <div class="text-container">
+            <h2>Introducing a Pillar in <br> the DEFI World</h2>
+            <h3>Powered by AIBITRAGE</h3>
+
+            <!-- <p>Powered by AI-</p> -->
+            <button>Launch App</button>
+        </div>
+        <div class="img-2">
+            <img src="Right-Side-p-500.png" alt="Image 3">
+        </div>
+    </div>
+</div>
+
+<div class="youtube-section">
+    <h2>YouTube Section</h2>
+    <p>Add your YouTube content here.</p>
+</div>
+
+<!-- Slider 1 -->
+<div class="section-container" data-sr>
+    <div class="text-container">
+        <h2>TAP INTO THE AIBITRAGE REALM</h2>
+        <p>Experience pure AIBITRAGE opportunities from the high tech algorithm we cultivated </p>
+    </div>
+    <div class="image-container">
+        <img src="pexels-cottonbro-studio-7299487.jpg" alt="Image 1">
+    </div>
+</div>
+
+<!-- Slider 2 -->
+<div class="section-container" data-sr>
+    <div class="text-container">
+        <h2>FINALLY GUARANTEED PROFITS</h2>
+        <p>AIBITRAGE'S simple but effective strategy allow users who stake to make a stable and 
+            well assured profits on their investment</p>
+    </div>
+    <div class="image-container">
+        <img src="pexels-cottonbro-studio-7266271.jpg" alt="Image 2">
+    </div>
+</div>
+
+<!-- Slider 3 -->
+<div class="section-container" data-sr>
+    <div class="text-container">
+        <h2>FLOURISHING INDEPENDENTLY</h2>
+        <p>We take pride creatiing an algorithm that doesn't depend on the monetory value of the token itself. 
+            The algorithm will continuously take advantage of any arbitrage opportunities it stumbles upon.
+        </p>
+    </div>
+    <div class="image-container">
+        <img src="pexels-cottonbro-studio-7266271.jpg" alt="Image 3">
+    </div>
+</div>
+
+<!-- Slider 4 -->
+<div class="section-container" data-sr>
+    <div class="text-container">
+        <h2>MARKET TRENDS  </h2>
+        <p>AIBTRAGE'S algorithm has been programmed to arbitrage the following cryptocurrencies</p>
+        <p>Don't worry, more will come. AIBONS its upto you to choose.</p>
+    </div>
+    <div class="image-container">
+        <img src="pexels-cottonbro-studio-7299487.jpg" alt="Image 4">
+    </div>
+</div>
+<div class="active">
+    <img src="Untitled design (1).gif" alt="">
+</div>
+<footer>
+    <div class="footer-div-1">
+        <div>
+            <img src="62e823626cd4fd359cdc15a8_Universe BG (1).png" alt="">
+        </div>
+        <div class="footer-div-2">
+            <img src="Untitled design (4) (1).png" alt="">
+        </div>
+        <div class="footer-div-3">
+            <h2>Subscribe to our newsletter</h2>
+            <p>Get the latest news and updates from us</p>
+            <form action="">
+                <input type="text" placeholder="Enter your email">
+                <button>Subscribe</button>
+        </div>
+        <div>
+        </div>
+    </div>
+    <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/scrollreveal@4/dist/scrollreveal.min.js" defer></script>
+<script src="path/to/your/minified/script.js" defer></script>
+<script>
+    document.addEventListener('scroll', function () {
+        const sections = document.querySelectorAll('.section-container');
+        sections.forEach((section, index) => {
+            const rect = section.getBoundingClientRect();
+            const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
+            section.classList.toggle('active', isVisible);
+
+            if (index > 0) {
+                const prevSection = sections[index - 1];
+                const prevRect = prevSection.getBoundingClientRect();
+                const isPrevVisible = prevRect.top <= window.innerHeight && prevRect.bottom >= 0;
+                prevSection.classList.toggle('active', isPrevVisible);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
