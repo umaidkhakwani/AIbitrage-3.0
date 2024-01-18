@@ -334,7 +334,7 @@ function FooterFunction({ callback }) {
                     textAlign: "center",
                   }}
                 >
-                  Gitbook
+                  Medium
                   <br />
                   <a
                     href="https://t.me/bitrageai"

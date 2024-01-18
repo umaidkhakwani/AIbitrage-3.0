@@ -86,7 +86,7 @@ function Main() {
   const matches = useMediaQuery("(min-width:600px)");
 
   const navigate = useNavigate();
-  const [pageOption, setpageOption] = useState("swap");
+  const [pageOption, setpageOption] = useState("pool");
   const [open, setOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("");
   const [value, setValue] = useState(-1);

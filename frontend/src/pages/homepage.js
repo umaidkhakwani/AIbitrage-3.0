@@ -2336,7 +2336,7 @@ function Homepage({ callback }) {
           }}
         >
           <img
-            src={top_logo}
+            src={logo_animation}
             alt="logo"
             style={{
               width: isSmScreen ? "200px" : "180px",
