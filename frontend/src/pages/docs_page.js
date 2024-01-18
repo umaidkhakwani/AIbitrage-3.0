@@ -13,6 +13,7 @@ import pool_vid_gif3 from "../images/pool_vid_gif3.mp4";
 import pool_details from "../images/vid_details.svg";
 import pool_details2 from "../images/vid_details2.svg";
 import pool_details3 from "../images/vid_details3.png";
+import list from "../images/3.0/list.jpg";
 
 import "../fonts/fonts.css";
 import FooterFunction from "../footer";
@@ -200,7 +201,7 @@ function Docs_page() {
                 Your browser does not support the video tag.
               </video>
               <img
-                src={pool_details3}
+                src={list}
                 alt="pool chart"
                 style={{ width: "500px", margin: "20px 0px" }}
               />

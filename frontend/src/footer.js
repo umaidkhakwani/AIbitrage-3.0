@@ -15,6 +15,8 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 function FooterFunction({ callback }) {
+  const navigate = useNavigate();
+
   const theme = useTheme();
   const isSmScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const matches = useMediaQuery("(min-width:600px)");
@@ -197,7 +199,7 @@ function FooterFunction({ callback }) {
                   <br />
                   <br />
                 </Typography>
-                <Typography
+                {/* <Typography
                   variant="h6"
                   sx={{
                     fontFamily: "Lora",
@@ -210,7 +212,7 @@ function FooterFunction({ callback }) {
                 >
                   Trade/Swap
                   <br />
-                </Typography>
+                </Typography> */}
                 <Typography
                   variant="h6"
                   sx={{
@@ -223,7 +225,8 @@ function FooterFunction({ callback }) {
                     textAlign: "center",
                     // textDecoration: "underline",
                   }}
-                  onClick={() => handleclick(13)}
+                  // onClick={() => handleclick(13)}
+                  onClick={() => navigate("/app")}
                 >
                   Investor’s Pools
                   <br />
@@ -334,7 +337,14 @@ function FooterFunction({ callback }) {
                     textAlign: "center",
                   }}
                 >
-                  Medium
+                  <a
+                    href="https://medium.com/@bitrage.ai"
+                    target="_blank" // Open link in a new tab
+                    rel="noopener noreferrer" // Security best practice for opening links in a new tab
+                    style={{ color: "inherit", textDecoration: "none" }}
+                  >
+                    Medium
+                  </a>
                   <br />
                   <a
                     href="https://t.me/bitrageai"
@@ -437,7 +447,7 @@ function FooterFunction({ callback }) {
                 fontSize: 14,
               }}
             >
-              Copyright 2023. All Rights Reserved. Designed and Developed by
+              Copyright 2024. All Rights Reserved. Designed and Developed by
               AIBITRAGE Team.
             </Typography>
           </Grid>

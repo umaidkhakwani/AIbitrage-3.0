@@ -14,6 +14,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link, useNavigate } from "react-router-dom";
 
 function FooterFunction_home({ callback2 }) {
+  const navigate = useNavigate();
+
   const theme = useTheme();
   const isSmScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const matches = useMediaQuery("(min-width:600px)");
@@ -102,8 +104,9 @@ function FooterFunction_home({ callback2 }) {
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     lineHeight: "1.2",
+                    fontWeight: "bold",
                     textAlign: "center",
-                    width:"fit-content",
+                    width: "fit-content",
                   }}
                 >
                   Policies
@@ -186,13 +189,14 @@ function FooterFunction_home({ callback2 }) {
                     textAlign: "center",
                     width: "fit-content",
                     lineHeight: "1.2",
+                    fontWeight: "bold",
                   }}
                 >
                   AIBITRAGE
                   <br />
                   <br />
                 </Typography>
-                <Typography
+                {/* <Typography
                   variant="h6"
                   sx={{
                     fontFamily: "Lora",
@@ -205,7 +209,7 @@ function FooterFunction_home({ callback2 }) {
                 >
                   Trade/Swap
                   <br />
-                </Typography>
+                </Typography> */}
                 <Typography
                   variant="h6"
                   sx={{
@@ -218,7 +222,8 @@ function FooterFunction_home({ callback2 }) {
                     textAlign: "center",
                     // textDecoration: "underline",
                   }}
-                  onClick={() => handleclick(13)}
+                  // onClick={() => handleclick(13)}
+                  onClick={() => navigate("/app")}
                 >
                   Investor’s Pools
                   <br />
@@ -242,6 +247,7 @@ function FooterFunction_home({ callback2 }) {
                   sx={{
                     fontFamily: "Mackinac",
                     fontSize: isSmScreen ? "20px" : "30px",
+                    fontWeight: "bold",
                     background: `linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)`,
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
@@ -310,6 +316,7 @@ function FooterFunction_home({ callback2 }) {
                     background: `linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)`,
                     WebkitBackgroundClip: "text",
                     width: "fit-content",
+                    fontWeight: "bold",
                     WebkitTextFillColor: "transparent",
                     textAlign: "center",
                     lineHeight: "1.2",
@@ -329,7 +336,14 @@ function FooterFunction_home({ callback2 }) {
                     textAlign: "center",
                   }}
                 >
-                  Medium
+                  <a
+                    href="https://medium.com/@bitrage.ai"
+                    target="_blank" // Open link in a new tab
+                    rel="noopener noreferrer" // Security best practice for opening links in a new tab
+                    style={{ color: "inherit", textDecoration: "none" }}
+                  >
+                    Medium
+                  </a>
                   <br />
                   <a
                     href="https://t.me/bitrageai"
@@ -432,7 +446,7 @@ function FooterFunction_home({ callback2 }) {
                 fontSize: 14,
               }}
             >
-              Copyright 2023. All Rights Reserved. Designed and Developed by
+              Copyright 2024. All Rights Reserved. Designed and Developed by
               AIBITRAGE Team.
             </Typography>
           </Grid>

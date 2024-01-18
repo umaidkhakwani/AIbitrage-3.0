@@ -89,9 +89,9 @@ import social1 from "../images/3.0/dextools.svg";
 import social2 from "../images/3.0/etherscan.png";
 // import social2 from "../images/3.0/etherscan.webp";
 import social3 from "../images/3.0/fjord.png";
-import social4 from "../images/3.0/telegram.webp";
+import social4 from "../images/3.0/telegram.png";
 import social5 from "../images/3.0/twitter.svg";
-import social6 from "../images/3.0/uniswap.webp";
+import social6 from "../images/3.0/uniswap.png";
 
 import top_logo from "../images/3.0/top_logo.svg";
 
@@ -129,7 +129,6 @@ import CustomModal from "./Modal";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 
 const AcrylicContainer = styled(Container)`
   position: relative;
@@ -521,7 +520,7 @@ function Homepage({ callback }) {
                       background: `linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)`,
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
-                      fontSize:"36px",
+                      fontSize: "36px",
                     }}
                   >
                     AIBITRAGE
@@ -664,7 +663,7 @@ function Homepage({ callback }) {
                 }}
               >
                 <a
-                  href="https://x.com/bitrageai"
+                  href="https://www.dextools.io/app/en/pairs"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -691,7 +690,7 @@ function Homepage({ callback }) {
                 }}
               >
                 <a
-                  href="https://x.com/bitrageai"
+                  href="https://etherscan.io"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -718,7 +717,7 @@ function Homepage({ callback }) {
                 }}
               >
                 <a
-                  href="https://x.com/bitrageai"
+                  href="https://www.fjordfoundry.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -798,6 +797,11 @@ function Homepage({ callback }) {
                   alignItems: "center",
                 }}
               >
+                <a
+                  href="https://uniswap.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                 <img
                   src={social6}
                   alt="logo"
@@ -806,11 +810,11 @@ function Homepage({ callback }) {
                     marginBottom: "30px",
                   }}
                 />
+                </a>
               </Grid>
             </Grid>
           </Container>
         </Box>
-
 
         {/* --------------------------------------  Video  ------------------------------------------ */}
         {/* <Box
@@ -991,7 +995,11 @@ function Homepage({ callback }) {
                   variant="h6"
                   sx={{
                     fontFamily: "Mackinac",
-                    fontSize: isSmScreen ? "35px" :  isLgScreen ? "45px":"50px",
+                    fontSize: isSmScreen
+                      ? "35px"
+                      : isLgScreen
+                      ? "45px"
+                      : "50px",
                     fontWeight: "bold",
                     background: `linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)`,
                     WebkitBackgroundClip: "text",
@@ -1013,8 +1021,16 @@ function Homepage({ callback }) {
                   }}
                 >
                   <br />
-                  Experience pure AIBITRAGE opportunities from the high tech
-                  algorithm we cultivated
+                  Step into the AIBITRAGE Realm, where the boundaries of
+                  traditional crypto trading are not just pushed, but redefined.
+                  Our platform is a fusion of revolutionary AI technology and
+                  the thrill of crypto arbitrage, creating an exhilarating
+                  trading experience like no other. Here at AIBITRAGE
+                  <span style={{ fontFamily: "Lora" }}>,</span> we
+                  <span style={{ fontFamily: "Lora" }}>'</span>re not just about
+                  making trades<span style={{ fontFamily: "Lora" }}>;</span> we
+                  <span style={{ fontFamily: "Lora" }}>'</span>re about
+                  pioneering a new way of interacting with the crypto world.
                   <br />
                 </Typography>
               </Container>
@@ -1034,7 +1050,7 @@ function Homepage({ callback }) {
               <img
                 src={circle_satellite}
                 alt="logo"
-                style={{ width: isSmScreen ? "70%" : "60%" , marginTop:"30px"}}
+                style={{ width: isSmScreen ? "70%" : "60%", marginTop: "30px" }}
               />
             </Grid>
           </Grid>
@@ -1096,7 +1112,11 @@ function Homepage({ callback }) {
                   variant="h6"
                   sx={{
                     fontFamily: "Mackinac",
-                    fontSize: isSmScreen ? "35px" : isLgScreen ? "45px": "55px",
+                    fontSize: isSmScreen
+                      ? "35px"
+                      : isLgScreen
+                      ? "45px"
+                      : "55px",
                     fontWeight: "bold",
                     background: `linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)`,
                     WebkitBackgroundClip: "text",
@@ -1118,9 +1138,21 @@ function Homepage({ callback }) {
                   }}
                 >
                   <br />
-                  AIBITRAGE<span style={{fontFamily:"Lora"}}>'</span>S simple but effective strategy allow users who
-                  stake to make a stable and well assured profits on their
-                  investment
+                  Embark on a unique journey with AIBITRAGE, where the thrill of
+                  crypto trading meets the comfort of guaranteed returns. Our
+                  revolutionary AI algorithm isn
+                  <span style={{ fontFamily: "Lora" }}>’</span>t just smart
+                  <span style={{ fontFamily: "Lora" }}>; </span>it
+                  <span style={{ fontFamily: "Lora" }}>’</span>s a game
+                  <span style={{ fontFamily: "Lora" }}>-</span>changer, turning
+                  the unpredictable waves of the crypto world into a steady flow
+                  of profit. Join AIBITRAGE and be part of an exclusive realm
+                  where confidence in your investments is as natural as the
+                  profits they earn. It
+                  <span style={{ fontFamily: "Lora" }}>’</span>s more than
+                  trading<span style={{ fontFamily: "Lora" }}>;</span> it
+                  <span style={{ fontFamily: "Lora" }}>’</span>s experiencing
+                  the future of financial success.
                   <br />
                 </Typography>
                 <button
@@ -1134,7 +1166,7 @@ function Homepage({ callback }) {
                     borderRadius: "15px",
                     marginTop: "10px",
                     background:
-                    "linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)",
+                      "linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)",
 
                     color: "#fff",
                     cursor: "pointer",
@@ -1199,7 +1231,11 @@ function Homepage({ callback }) {
                   variant="h6"
                   sx={{
                     fontFamily: "Mackinac",
-                    fontSize: isSmScreen ? "28px" :  isLgScreen ? "40px": "55px",
+                    fontSize: isSmScreen
+                      ? "28px"
+                      : isLgScreen
+                      ? "40px"
+                      : "55px",
                     fontWeight: "bold",
                     background: `linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)`,
                     WebkitBackgroundClip: "text",
@@ -1221,10 +1257,17 @@ function Homepage({ callback }) {
                   }}
                 >
                   <br />
-                  We take pride creatiing an algorithm that doesn<span style={{fontFamily:"Lora"}}>'</span>t depend on
-                  the monetory value of the token itself. The algorithm will
-                  continuously take advantage of any arbitrage opportunities it
-                  stumbles upon.
+                  At AIBITRAGE<span style={{ fontFamily: "Lora" }}>,</span> we
+                  take pride in an algorithm that thrives independently of our
+                  token<span style={{ fontFamily: "Lora" }}>'</span>s value. Our
+                  unique staking process is designed to be robust
+                  <span style={{ fontFamily: "Lora" }}>,</span> ensuring your
+                  investments grow steadily
+                  <span style={{ fontFamily: "Lora" }}>,</span> unaffected by
+                  market swings. Experience the freedom of a secure
+                  <span style={{ fontFamily: "Lora" }}>,</span> stable
+                  investment journey, separate from the volatility of the crypto
+                  world.
                   <br />
                 </Typography>
               </Container>
@@ -1765,7 +1808,6 @@ function Homepage({ callback }) {
             </div>
           </Container>
         </Box> */}
-
 
         {/* --------------------------------------  Market Trends  ------------------------------------------ */}
 
@@ -2361,7 +2403,7 @@ function Homepage({ callback }) {
             src={alien}
             alt="logo"
             style={{
-              width: isSmScreen ? "100%" : isLgScreen?"500px":"700px",
+              width: isSmScreen ? "100%" : isLgScreen ? "500px" : "700px",
               margin: "0px auto",
               // marginBottom: "30px",
             }}
