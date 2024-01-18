@@ -47,7 +47,9 @@ const Launch_App_ModalComponent = ({launch_callback}) => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "black",
+          // backgroundColor: "black",
+          backgroundColor: "rgb(0 0 0 / 43%)",
+
           color: "white",
           border: "none",
           borderRadius: "10px",

@@ -32,8 +32,10 @@ const ModalComponent = () => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "black",
-          color: "white",
+          // backgroundColor: "black",
+          backgroundColor: "rgb(255 255 255 / 43%)",
+
+          color: "black",
           border: "none",
           borderRadius: "10px",
           padding: "20px",
@@ -67,11 +69,14 @@ const ModalComponent = () => {
             color: "#FFF",
             fontFamily: "Mackinac",
             background: `linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)`,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
+                // WebkitBackgroundClip: "text",
+                // WebkitTextFillColor: "transparent",
             fontSize: "38px",
             fontStyle: "normal",
             textAlign: "center",
+            padding:"0px 10px",
+            borderRadius:"20px",
+            marginBottom:"10px"
           }}
         >
           Cookies Settings
@@ -81,7 +86,7 @@ const ModalComponent = () => {
           sx={{
             color: "#FFF",
             fontFamily: "Mackinac",
-            fontSize: "14px",
+            fontSize: "12px",
             fontStyle: "normal",
             textAlign: "justify",
           }}

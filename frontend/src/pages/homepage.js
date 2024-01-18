@@ -428,38 +428,45 @@ function Homepage({ callback }) {
         }}
       >
         <ModalComponent />
-        <Box sx={{ width: "100%", padding: isMdScreen ? "250px 0px 100px 0px" : "200px  0px 0px 0px" }}>
+        <Box
+          sx={{
+            width: "100%",
+            padding: isLgScreen ? "250px 0px 100px 0px" : "200px  0px 0px 0px",
+          }}
+        >
           <Grid container sx={{ width: "100%", height: "100%" }}>
-            {isMdScreen ? (""):(
-            <Grid
-              item
-              xs={12}
-              md={12}
-              lg={3}
-              sx={{ width: "100%", height: "100%" }}
-            >
-              <Box
-                sx={{
-                  width: "100%",
-                  // height: "100%",
-                  height: matches ? "100%" : "500px",
-                  display: "flex",
-                  justifyContent: "center",
-                }}
+            {isLgScreen ? (
+              ""
+            ) : (
+              <Grid
+                item
+                xs={12}
+                md={12}
+                lg={3}
+                sx={{ width: "100%", height: "100%" }}
               >
-                <img
-                  src={left_stairs}
-                  alt="logo"
-                  style={{
+                <Box
+                  sx={{
                     width: "100%",
-                    position: "relative",
-                    // bottom: matches ? "250px" : "100px",
-                    right: "15px",
-                    zIndex: "-1",
+                    // height: "100%",
+                    height: matches ? "100%" : "500px",
+                    display: "flex",
+                    justifyContent: "center",
                   }}
-                />
-              </Box>
-            </Grid>
+                >
+                  <img
+                    src={left_stairs}
+                    alt="logo"
+                    style={{
+                      width: "100%",
+                      position: "relative",
+                      // bottom: matches ? "250px" : "100px",
+                      right: "15px",
+                      zIndex: "-1",
+                    }}
+                  />
+                </Box>
+              </Grid>
             )}
             <Grid
               item
@@ -576,36 +583,38 @@ function Homepage({ callback }) {
                 </Box>
               </Box>
             </Grid>
-            {isMdScreen ? (""):(
-            <Grid
-              item
-              xs={12}
-              md={12}
-              lg={3}
-              sx={{ width: "100%", height: "100%" }}
-            >
-              <Box
-                sx={{
-                  width: "100%",
-                  // height: "100%",
-                  height: matches ? "100%" : "500px",
-                  display: "flex",
-                  justifyContent: "center",
-                }}
+            {isLgScreen ? (
+              ""
+            ) : (
+              <Grid
+                item
+                xs={12}
+                md={12}
+                lg={3}
+                sx={{ width: "100%", height: "100%" }}
               >
-                <img
-                  src={right_stairs}
-                  alt="logo"
-                  style={{
+                <Box
+                  sx={{
                     width: "100%",
-                    position: "relative",
-                    // bottom: matches ? "250px" : "100px",
-                    right: "15px",
-                    zIndex: "-1",
+                    // height: "100%",
+                    height: matches ? "100%" : "500px",
+                    display: "flex",
+                    justifyContent: "center",
                   }}
-                />
-              </Box>
-            </Grid>
+                >
+                  <img
+                    src={right_stairs}
+                    alt="logo"
+                    style={{
+                      width: "100%",
+                      position: "relative",
+                      // bottom: matches ? "250px" : "100px",
+                      right: "15px",
+                      zIndex: "-1",
+                    }}
+                  />
+                </Box>
+              </Grid>
             )}
           </Grid>
         </Box>
@@ -618,7 +627,7 @@ function Homepage({ callback }) {
             height: "100%",
           }}
         >
-          <Container sx={{ width: isSmScreen ? "300px" : "400px" }}>
+          <Container sx={{ width: isSmScreen ? "300px" : "100%" }}>
             <Typography
               variant="h6"
               sx={{
@@ -638,7 +647,18 @@ function Homepage({ callback }) {
               <br />
             </Typography>
             <Grid container>
-              <Grid item xs={4} sm={4} md={4} lg={4}>
+              <Grid
+                item
+                xs={4}
+                sm={4}
+                md={2}
+                lg={2}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
                 <a
                   href="https://x.com/bitrageai"
                   target="_blank"
@@ -654,7 +674,18 @@ function Homepage({ callback }) {
                   />
                 </a>
               </Grid>
-              <Grid item xs={4} sm={4} md={4} lg={4}>
+              <Grid
+                item
+                xs={4}
+                sm={4}
+                md={2}
+                lg={2}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
                 <a
                   href="https://x.com/bitrageai"
                   target="_blank"
@@ -670,7 +701,18 @@ function Homepage({ callback }) {
                   />
                 </a>
               </Grid>
-              <Grid item xs={4} sm={4} md={4} lg={4}>
+              <Grid
+                item
+                xs={4}
+                sm={4}
+                md={2}
+                lg={2}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
                 <a
                   href="https://x.com/bitrageai"
                   target="_blank"
@@ -686,7 +728,18 @@ function Homepage({ callback }) {
                   />
                 </a>
               </Grid>
-              <Grid item xs={4} sm={4} md={4} lg={4}>
+              <Grid
+                item
+                xs={4}
+                sm={4}
+                md={2}
+                lg={2}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
                 <a
                   href="https://t.me/bitrageai"
                   target="_blank"
@@ -702,7 +755,18 @@ function Homepage({ callback }) {
                   />
                 </a>
               </Grid>
-              <Grid item xs={4} sm={4} md={4} lg={4}>
+              <Grid
+                item
+                xs={4}
+                sm={4}
+                md={2}
+                lg={2}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
                 <a
                   href="https://x.com/bitrageai"
                   target="_blank"
@@ -718,7 +782,18 @@ function Homepage({ callback }) {
                   />
                 </a>
               </Grid>
-              <Grid item xs={4} sm={4} md={4} lg={4}>
+              <Grid
+                item
+                xs={4}
+                sm={4}
+                md={2}
+                lg={2}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
                 <img
                   src={social6}
                   alt="logo"
@@ -1362,7 +1437,7 @@ function Homepage({ callback }) {
                   variant="h6"
                   sx={{
                     fontFamily: "Mackinac",
-                    fontSize: isSmScreen ? "35px" : "50px",
+                    fontSize: isSmScreen ? "35px" :  isLgScreen ? "45px":"50px",
                     fontWeight: "bold",
                     background: `linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)`,
                     WebkitBackgroundClip: "text",
@@ -1405,7 +1480,7 @@ function Homepage({ callback }) {
               <img
                 src={circle_satellite}
                 alt="logo"
-                style={{ width: isSmScreen ? "80%" : "60%" }}
+                style={{ width: isSmScreen ? "70%" : "60%" , marginTop:"30px"}}
               />
             </Grid>
           </Grid>
@@ -1467,7 +1542,7 @@ function Homepage({ callback }) {
                   variant="h6"
                   sx={{
                     fontFamily: "Mackinac",
-                    fontSize: isSmScreen ? "35px" : "55px",
+                    fontSize: isSmScreen ? "35px" : isLgScreen ? "45px": "55px",
                     fontWeight: "bold",
                     background: `linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)`,
                     WebkitBackgroundClip: "text",
@@ -1489,7 +1564,7 @@ function Homepage({ callback }) {
                   }}
                 >
                   <br />
-                  AIBITRAGE'S simple but effective strategy allow users who
+                  AIBITRAGE<span style={{fontFamily:"Lora"}}>'</span>S simple but effective strategy allow users who
                   stake to make a stable and well assured profits on their
                   investment
                   <br />
@@ -1505,7 +1580,8 @@ function Homepage({ callback }) {
                     borderRadius: "15px",
                     marginTop: "10px",
                     background:
-                      "linear-gradient(101deg, #1F8EBE -5.36%, #440495 29.46%, #440495 56.03%, #B102CD 81.92%)",
+                    "linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)",
+
                     color: "#fff",
                     cursor: "pointer",
                     textDecoration: "none",
@@ -1564,12 +1640,12 @@ function Homepage({ callback }) {
                 alignItems: "center",
               }}
             >
-              <Container sx={{ width: isSmScreen ? "90%" : "60%" }}>
+              <Container sx={{ width: isSmScreen ? "90%" : "80%" }}>
                 <Typography
                   variant="h6"
                   sx={{
                     fontFamily: "Mackinac",
-                    fontSize: isSmScreen ? "35px" : "55px",
+                    fontSize: isSmScreen ? "28px" :  isLgScreen ? "40px": "55px",
                     fontWeight: "bold",
                     background: `linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)`,
                     WebkitBackgroundClip: "text",
@@ -1591,7 +1667,7 @@ function Homepage({ callback }) {
                   }}
                 >
                   <br />
-                  We take pride creatiing an algorithm that doesn't depend on
+                  We take pride creatiing an algorithm that doesn<span style={{fontFamily:"Lora"}}>'</span>t depend on
                   the monetory value of the token itself. The algorithm will
                   continuously take advantage of any arbitrage opportunities it
                   stumbles upon.
@@ -2271,11 +2347,11 @@ function Homepage({ callback }) {
             height: "100%",
             marginTop: "500px",
             background: "#002e42",
-            display:"flex",
-            flexDirection:"column",
-            alignItems:"center",
-            justifyContent:"center",
-            position:"relative",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            position: "relative",
           }}
         >
           <img
@@ -2283,9 +2359,9 @@ function Homepage({ callback }) {
             alt="logo"
             style={{
               width: isSmScreen ? "200px" : "200px",
-              position:"absolute",
-              top:"-400px",
-              
+              position: "absolute",
+              top: "-400px",
+
               // marginBottom: "30px",
             }}
           />
@@ -2295,7 +2371,7 @@ function Homepage({ callback }) {
             alt="logo"
             style={{
               width: isSmScreen ? "100%" : "100%",
-              marginTop:"-170px",
+              marginTop: "-170px",
               // marginBottom: "30px",
             }}
           />
@@ -2304,8 +2380,8 @@ function Homepage({ callback }) {
             src={alien}
             alt="logo"
             style={{
-              width: isSmScreen ? "100%" : "700px",
-              margin:"0px auto",
+              width: isSmScreen ? "100%" : isLgScreen?"500px":"700px",
+              margin: "0px auto",
               // marginBottom: "30px",
             }}
           />
@@ -2406,7 +2482,7 @@ function Homepage({ callback }) {
                     border: "none",
                     borderRadius: "15px",
                     background:
-                    "linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)",
+                      "linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)",
                     color: "white",
                     cursor: "pointer",
                     fontSize: "14px",

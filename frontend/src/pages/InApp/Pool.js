@@ -26,6 +26,8 @@ import ring_1 from "../../images/ring_1.svg";
 import ring_2 from "../../images/ring_2.svg";
 import ring_3 from "../../images/ring_3.svg";
 import ring_4 from "../../images/ring_4.svg";
+import ring4 from "../../images/3.0/ring4.png";
+import ring5 from "../../images/3.0/ring5.png";
 
 import pool_vid from "../../images/pool_vid.mp4";
 import pool_vid_gif from "../../images/pool_vid.gif";
@@ -304,6 +306,7 @@ function Pool_function() {
           sx={{
             backgroundColor: "rgb(0 0 0 / 13%)",
             borderRadius: "10px",
+            border: "2px solid #2B2C3B",
             width: "90%",
             marginTop: "50px",
           }}
@@ -327,7 +330,7 @@ function Pool_function() {
                           // color: "#50A883",
                         }}
                       >
-                        Pool
+                        POOL
                       </Typography>
                     </TableCell>
                     <TableCell>
@@ -345,7 +348,7 @@ function Pool_function() {
                           // color: "#50A883",
                         }}
                       >
-                        Pool Name
+                        POOL NAME
                       </Typography>
                     </TableCell>
                     <TableCell>
@@ -363,7 +366,7 @@ function Pool_function() {
                           // color: "#50A883",
                         }}
                       >
-                        Fixed Investment
+                        FIXED INVESTMENT
                       </Typography>
                     </TableCell>
                     <TableCell>
@@ -411,42 +414,58 @@ function Pool_function() {
                           textAlign: "center",
                         }}
                       >
-                        Invest Now
+                        STAKE NOW
                       </Typography>
                     </TableCell>
                   </TableRow>
                   {[
                     {
-                      name: "The Novice Arbitrage Pool",
-                      investment: "0.5%",
-                      ROI: "0.65",
-                      percentageChange: "+1.68%",
+                      name: "Lunar Pool",
+                      investment: "0.25% AIB",
+                      ROI: "0.3",
+                      percentageChange: "+0.05%",
                       graph: ring_1,
                       textcolor: "#861E85",
                     },
                     {
-                      name: "The Advanced Arbitrage Pool",
-                      investment: "0.75%",
-                      ROI: "1",
-                      percentageChange: "+1.68%",
+                      name: "Solar Pool",
+                      investment: "0.5% AIB",
+                      ROI: "0.65",
+                      percentageChange: "+0.15%",
                       graph: ring_2,
                       textcolor: "#25D366",
                     },
                     {
-                      name: "The Diversified Assets Pool",
-                      investment: "1%",
-                      ROI: "1.5",
-                      percentageChange: "+1.68%",
+                      name: "Stellar Pool",
+                      investment: "0.75% AIB",
+                      ROI: "1",
+                      percentageChange: "+0.25%",
                       graph: ring_3,
                       textcolor: "#F55AA3",
                     },
                     {
-                      name: "The High Roller Pool",
-                      investment: "1.5%",
-                      ROI: "2",
-                      percentageChange: "+1.68%",
+                      name: "Galactic Pool",
+                      investment: "1.0%",
+                      ROI: "1.5",
+                      percentageChange: "+0.5%",
                       graph: ring_4,
                       textcolor: "#2243FF",
+                    },
+                    {
+                      name: "Nebula Pool",
+                      investment: "1.25%",
+                      ROI: "2.2",
+                      percentageChange: "+0.95%",
+                      graph: ring4,
+                      textcolor: "#861E85",
+                    },
+                    {
+                      name: "Cosmic Pool",
+                      investment: "1.5%",
+                      ROI: "3.0",
+                      percentageChange: "+1.5%",
+                      graph: ring5,
+                      textcolor: "#F55AA3",
                     },
                   ].map((row, index) => (
                     <TableRow

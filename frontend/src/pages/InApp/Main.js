@@ -106,7 +106,7 @@ function Main() {
   const TabItem = styled.div`
     padding: 10px 20px;
     font-family: "Aclonica", sans-serif;
-    color: ${({ selected }) => (selected ? "#50A883" : "white")};
+    color: ${({ selected }) => (selected ? "#50A883" : "#861E85")};
     cursor: pointer;
     transition: color 0.3s ease;
 
@@ -164,7 +164,11 @@ function Main() {
           margin: 0,
           padding: 0,
           // backgroundColor: "black",
-          background: "#FFF7F2",
+          backgroundImage: `url(${app_background})`,
+          backgroundSize: "cover",
+          overflowY: "hidden",
+          backgroundRepeat: "no-repeat",
+          // background: "#FFF7F2",
         }}
       >
         {/* ----------------------------------------------  Side Option ------------------------------------------------------- */}
@@ -449,7 +453,7 @@ function Main() {
             }}
           >
             <img
-              src={footer_img}
+              src={top_logo}
               alt="logo"
               style={{ margin: "0px", cursor: "pointer", width: "55px" }}
               onClick={handleClick_Home}
@@ -523,13 +527,13 @@ function Main() {
             width: "100%",
             height: "100%",
             // backgroundImage: `url(${app_background})`,
-            // backgroundSize: "contain",
+            // backgroundSize: "cover",
             // overflowY: "hidden",
-            // repeat: "no-repeat",
-            background: "#FFF7F2",
+            // backgroundRepeat: "no-repeat",
+            // background: "#FFF7F2",
             margin: 0,
             padding: 0,
-            // willChange: "transform", // Add will-change property
+            willChange: "transform", // Add will-change property
             // position: "relative",
           }}
         >
