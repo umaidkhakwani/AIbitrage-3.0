@@ -22,6 +22,7 @@ import {
   Typography,
   useControlled,
 } from "@mui/material";
+
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import bg1 from "../images/background1.png";
 import bg2 from "../images/background2.png";
@@ -84,11 +85,12 @@ import right_stairs from "../images/3.0/right_stairs.png";
 import logo_animation from "../images/3.0/logo_animation.gif";
 
 import newsletter from "../images/newsletter.svg";
-import social1 from "../images/3.0/dextools.webp";
-import social2 from "../images/3.0/etherscan.webp";
+import social1 from "../images/3.0/dextools.svg";
+import social2 from "../images/3.0/etherscan.png";
+// import social2 from "../images/3.0/etherscan.webp";
 import social3 from "../images/3.0/fjord.png";
 import social4 from "../images/3.0/telegram.webp";
-import social5 from "../images/3.0/twitter.webp";
+import social5 from "../images/3.0/twitter.svg";
 import social6 from "../images/3.0/uniswap.webp";
 
 import top_logo from "../images/3.0/top_logo.svg";
@@ -127,6 +129,7 @@ import CustomModal from "./Modal";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 
 const AcrylicContainer = styled(Container)`
   position: relative;
@@ -505,8 +508,8 @@ function Homepage({ callback }) {
                   variant="h6"
                   sx={{
                     fontFamily: "Mackinac",
-                    fontSize: isSmScreen ? "26px" : "36px",
-                    color: "#000",
+                    fontSize: isSmScreen ? "26px" : "28px",
+                    color: "#a56feb",
                     textAlign: isLgScreen ? "center" : "center",
                     lineHeight: "1.2",
                   }}
@@ -518,6 +521,7 @@ function Homepage({ callback }) {
                       background: `linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)`,
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
+                      fontSize:"36px",
                     }}
                   >
                     AIBITRAGE
@@ -809,7 +813,7 @@ function Homepage({ callback }) {
 
 
         {/* --------------------------------------  Video  ------------------------------------------ */}
-        <Box
+        {/* <Box
           sx={{
             backgroundColor: "transparent",
             // backgroundImage: `url(${new_bg2_2})`,
@@ -851,7 +855,7 @@ function Homepage({ callback }) {
               </Grid>
             </Grid>
           </Container>
-        </Box>
+        </Box> */}
 
         {/* --------------------------------------  Secure Bitcoin  ------------------------------------------ */}
 
@@ -2213,7 +2217,7 @@ function Homepage({ callback }) {
             </Grid>
           </Container>
         </Box>
-        
+
         {/* --------------------------------------  Integrations  ------------------------------------------ */}
 
         <Box
@@ -2332,10 +2336,10 @@ function Homepage({ callback }) {
           }}
         >
           <img
-            src={logo_animation}
+            src={top_logo}
             alt="logo"
             style={{
-              width: isSmScreen ? "200px" : "200px",
+              width: isSmScreen ? "200px" : "180px",
               position: "absolute",
               top: "-400px",
 

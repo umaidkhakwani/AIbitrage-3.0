@@ -99,9 +99,9 @@ function Terms() {
                 fontSize: 14,
               }}
             >
-              Welcome to Ai-Bitrage! These Terms of Use ("Terms") govern your
+              Welcome to Ai-Bitrage! These Terms of Use <span style={{fontFamily:"Lora"}}>("Terms")</span> govern your
               access and use of our website (www.ai-bitrage.com) and all related
-              services (collectively, the "Website"). By accessing or using the
+              services <span style={{fontFamily:"Lora"}}> (collectively, the "Website")</span>. By accessing or using the
               Website, you agree to be bound by these Terms. If you do not agree
               with any part of these Terms, please refrain from using the
               Website.
@@ -134,14 +134,14 @@ function Terms() {
               When using the Website, you agree not to:
               <br />
               <br />
-              a. Violate any applicable laws or regulations; b. Infringe upon
-              the rights of others, including intellectual property rights; c.
-              Transmit any unlawful, harmful, or offensive content; d. Interfere
-              with the proper functioning of the Website; e. Engage in any form
-              of hacking, data mining, or unauthorized access; f. Engage in any
-              activity that may disrupt or burden our infrastructure; g.
-              Misrepresent your identity or impersonate any person or entity; h.
-              Attempt to gain unauthorized access to other users' accounts; i.
+              a. Violate any applicable laws or regulations;<br /> b. Infringe upon
+              the rights of others, including intellectual property rights;<br /> c.
+              Transmit any unlawful, harmful, or offensive content; <br />d. Interfere
+              with the proper functioning of the Website; <br />e. Engage in any form
+              of hacking, data mining, or unauthorized access; <br />f. Engage in any
+              activity that may disrupt or burden our infrastructure; <br />g.
+              Misrepresent your identity or impersonate any person or entity;<br /> h.
+              Attempt to gain unauthorized access to other users' accounts;<br /> i.
               Use the Website for any illegal or unauthorized purpose.
               <br />
               <br />

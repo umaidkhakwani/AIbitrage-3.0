@@ -491,7 +491,7 @@ function Pool_function() {
                           variant="h6"
                           sx={{
                             fontFamily: "Mackinac",
-                            fontSize: "12px",
+                            fontSize: "16px",
                             textAlign: "center",
                             color: row.textcolor,
                           }}
@@ -504,9 +504,9 @@ function Pool_function() {
                           variant="subtitle1"
                           sx={{
                             fontFamily: "Poppins",
-                            fontSize: "14px",
+                            fontSize: "16px",
                             textAlign: "center",
-                            color: "#B982FF",
+                            color: "#7120d8",
                           }}
                         >
                           {row.investment}
@@ -517,7 +517,7 @@ function Pool_function() {
                           variant="h6"
                           sx={{
                             fontFamily: "Poppins",
-                            fontSize: "14px",
+                            fontSize: "16px",
                             textAlign: "center",
                             color: "#50A883",
                           }}

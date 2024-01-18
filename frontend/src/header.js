@@ -286,8 +286,8 @@ function Header_Function() {
                     PaperProps={{
                       style: {
                         width: "98%",
-                        backgroundColor: "rgba(0, 0, 0, 0.7)",
-                        color: "#B102CD",
+                        backgroundColor: "rgba(0, 0, 0, 0.8)",
+                        color: "#50A883",
                         position: "relative",
                         left: "0px",
                       },
@@ -308,7 +308,7 @@ function Header_Function() {
                       >
                         <div>{getTabName(index)}</div>
                         {(index === 3 ) && (
-                          <LockIcon style={{ color: "#B102CD" }} />
+                          <LockIcon style={{ color: "#50A883" }} />
                         )}
                       </MenuItem>
                     ))}

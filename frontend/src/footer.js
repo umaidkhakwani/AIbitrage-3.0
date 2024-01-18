@@ -270,7 +270,7 @@ function FooterFunction({ callback }) {
                     textAlign: "center",
                     cursor: "pointer",
                   }}
-                  onClick={() => handleclick(4)}
+                  onClick={() => handleclick(1)}
                 >
                   Docs
                   <br />
