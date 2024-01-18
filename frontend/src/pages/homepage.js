@@ -807,456 +807,6 @@ function Homepage({ callback }) {
           </Container>
         </Box>
 
-        {/* --------------------------------------  Market Trends  ------------------------------------------ */}
-
-        <Box
-          sx={{
-            width: "100%",
-            height: "100%",
-            position: "relative",
-            bottom: isXlScreen ? "0px" : "0px",
-            margin: "50px 0px",
-          }}
-        >
-          <Typography
-            variant="h6"
-            sx={{
-              fontFamily: "Mackinac",
-              fontSize: isSmScreen ? "26px" : "40px",
-              fontWeight: "bold",
-              background: `linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)`,
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              textAlign: "center",
-              lineHeight: "1.2",
-              width: "fit-content",
-              margin: "10px auto",
-            }}
-          >
-            Market Trend
-          </Typography>
-          <Container
-            sx={{
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Grid
-              container
-              sx={{
-                width: "80%",
-                height: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Grid
-                item
-                xs={12}
-                sm={6}
-                md={6}
-                lg={4}
-                sx={{
-                  height: "100%",
-                  color: "white",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  margin: "15px 0px",
-                }}
-              >
-                <Container
-                  sx={{
-                    background: "transparent",
-                    width: "220px",
-                    height: "115px",
-                    borderRadius: "10px",
-                    backgroundColor: "rgb(0 0 0 / 13%)",
-                    backdropFilter: "blur(8px)",
-                    padding: "10px 0px",
-                  }}
-                >
-                  <img
-                    src={btc_trend}
-                    alt="logo"
-                    style={{
-                      padding: isSmScreen ? "0px 10px" : "0px",
-                      width: "150px",
-                      marginBottom: "10px",
-                    }}
-                  />
-                  <Grid
-                    container
-                    sx={{ padding: isSmScreen ? "0px 10px" : "0px" }}
-                  >
-                    <Grid item xs={6} sm={6} md={6} lg={6}>
-                      <Typography
-                        variant="h6"
-                        sx={{
-                          fontFamily: "Roboto",
-                          fontSize: "16px",
-                          lineHeight: "1.2",
-                          color: "black",
-                        }}
-                      >
-                        $
-                        {coinsData && coinsData[0] && coinsData[0].price
-                          ? (coinsData[0]?.price).toFixed(4)
-                          : "43000"}
-                      </Typography>
-
-                      <Typography
-                        variant="h6"
-                        sx={{
-                          fontFamily: "Roboto",
-                          fontSize: "12px",
-                          color: "rgb(46 46 46 / 60%)",
-                          lineHeight: "1.2",
-                        }}
-                      >
-                        {coinsData && coinsData[0] && coinsData[0].price
-                          ? (coinsData[0]?.change).toFixed(6)
-                          : "1.41"}
-                        %{/* 1.41% */}
-                      </Typography>
-                    </Grid>
-                    <Grid item xs={6} sm={6} md={6} lg={6}>
-                      <img
-                        src={btc_chart}
-                        alt="logo"
-                        style={{ width: "100px" }}
-                      />
-                    </Grid>
-                  </Grid>
-                </Container>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                sm={6}
-                md={6}
-                lg={4}
-                sx={{
-                  height: "100%",
-                  color: "white",
-                  display: "flex",
-                  justifyContent: "center",
-                  margin: "15px 0px",
-                  alignItems: "center",
-                }}
-              >
-                <Container
-                  sx={{
-                    background: "transparent",
-                    width: "220px",
-                    height: "115px",
-                    borderRadius: "10px",
-                    backgroundColor: "rgb(0 0 0 / 13%)",
-                    backdropFilter: "blur(8px)",
-                    padding: "10px 0px",
-                  }}
-                >
-                  <img
-                    src={eth_trend}
-                    alt="logo"
-                    style={{
-                      padding: isSmScreen ? "0px 10px" : "0px",
-                      width: "150px",
-                      marginBottom: "10px",
-                    }}
-                  />
-                  <Grid
-                    container
-                    sx={{ padding: isSmScreen ? "0px 10px" : "0px" }}
-                  >
-                    <Grid item xs={6} sm={6} md={6} lg={6}>
-                      <Typography
-                        variant="h6"
-                        sx={{
-                          fontFamily: "Roboto",
-                          fontSize: "16px",
-                          lineHeight: "1.2",
-                          color: "black",
-                        }}
-                      >
-                        $
-                        {coinsData && coinsData[0] && coinsData[0].price
-                          ? (coinsData[1]?.price).toFixed(4)
-                          : "43000"}
-                      </Typography>
-
-                      <Typography
-                        variant="h6"
-                        sx={{
-                          fontFamily: "Roboto",
-                          fontSize: "12px",
-                          color: "rgb(46 46 46 / 60%)",
-                          lineHeight: "1.2",
-                        }}
-                      >
-                        {coinsData && coinsData[0] && coinsData[0].price
-                          ? (coinsData[1]?.change).toFixed(6)
-                          : "1.41"}
-                        %
-                      </Typography>
-                    </Grid>
-                    <Grid item xs={6} sm={6} md={6} lg={6}>
-                      <img
-                        src={eth_chart}
-                        alt="logo"
-                        style={{ width: "100px" }}
-                      />
-                    </Grid>
-                  </Grid>
-                </Container>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                sm={6}
-                md={6}
-                lg={4}
-                sx={{
-                  height: "100%",
-                  color: "white",
-                  display: "flex",
-                  justifyContent: "center",
-                  margin: "15px 0px",
-                  alignItems: "center",
-                }}
-              >
-                <Container
-                  sx={{
-                    background: "transparent",
-                    width: "220px",
-                    height: "115px",
-                    borderRadius: "10px",
-                    backgroundColor: "rgb(0 0 0 / 13%)",
-                    backdropFilter: "blur(8px)",
-                    padding: "10px 0px",
-                  }}
-                >
-                  <img
-                    src={xrp_trend}
-                    alt="logo"
-                    style={{
-                      padding: isSmScreen ? "0px 10px" : "0px",
-                      width: "150px",
-                      marginBottom: "10px",
-                    }}
-                  />
-                  <Grid
-                    container
-                    sx={{ padding: isSmScreen ? "0px 10px" : "0px" }}
-                  >
-                    <Grid item xs={6} sm={6} md={6} lg={6}>
-                      <Typography
-                        variant="h6"
-                        sx={{
-                          fontFamily: "Roboto",
-                          fontSize: "16px",
-                          lineHeight: "1.2",
-                          color: "black",
-                        }}
-                      >
-                        $
-                        {coinsData && coinsData[0] && coinsData[0].price
-                          ? (coinsData[4]?.price).toFixed(4)
-                          : "$43000"}
-                      </Typography>
-
-                      <Typography
-                        variant="h6"
-                        sx={{
-                          fontFamily: "Roboto",
-                          fontSize: "12px",
-                          color: "rgb(46 46 46 / 60%)",
-                          lineHeight: "1.2",
-                        }}
-                      >
-                        {coinsData && coinsData[0] && coinsData[0].change
-                          ? (coinsData[4]?.change).toFixed(4)
-                          : "$43000"}
-                        %
-                      </Typography>
-                    </Grid>
-                    <Grid item xs={6} sm={6} md={6} lg={6}>
-                      <img
-                        src={bnb_chart}
-                        alt="logo"
-                        style={{ width: "100px" }}
-                      />
-                    </Grid>
-                  </Grid>
-                </Container>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                sm={6}
-                md={6}
-                lg={4}
-                sx={{
-                  height: "100%",
-                  color: "white",
-                  display: "flex",
-                  justifyContent: "center",
-                  margin: "15px 0px",
-                  alignItems: "center",
-                }}
-              >
-                <Container
-                  sx={{
-                    background: "transparent",
-                    width: "220px",
-                    height: "115px",
-                    borderRadius: "10px",
-                    backgroundColor: "rgb(0 0 0 / 13%)",
-                    backdropFilter: "blur(8px)",
-                    padding: "10px 0px",
-                  }}
-                >
-                  <img
-                    src={usdt_trend}
-                    alt="logo"
-                    style={{
-                      padding: isSmScreen ? "0px 10px" : "0px",
-                      width: "150px",
-                      marginBottom: "10px",
-                    }}
-                  />
-                  <Grid
-                    container
-                    sx={{ padding: isSmScreen ? "0px 10px" : "0px" }}
-                  >
-                    <Grid item xs={6} sm={6} md={6} lg={6}>
-                      <Typography
-                        variant="h6"
-                        sx={{
-                          fontFamily: "Roboto",
-                          fontSize: "16px",
-                          lineHeight: "1.2",
-                          color: "black",
-                        }}
-                      >
-                        $
-                        {coinsData && coinsData[0] && coinsData[0].price
-                          ? (coinsData[2]?.price).toFixed(4)
-                          : "$43000"}
-                      </Typography>
-
-                      <Typography
-                        variant="h6"
-                        sx={{
-                          fontFamily: "Roboto",
-                          fontSize: "12px",
-                          color: "rgb(46 46 46 / 60%)",
-                          lineHeight: "1.2",
-                        }}
-                      >
-                        {coinsData && coinsData[0] && coinsData[0].change
-                          ? (coinsData[2]?.change).toFixed(4)
-                          : "$43000"}
-                        %
-                      </Typography>
-                    </Grid>
-                    <Grid item xs={6} sm={6} md={6} lg={6}>
-                      <img
-                        src={usdt_chart}
-                        alt="logo"
-                        style={{ width: "100px" }}
-                      />
-                    </Grid>
-                  </Grid>
-                </Container>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                sm={6}
-                md={6}
-                lg={4}
-                sx={{
-                  height: "100%",
-                  color: "white",
-                  display: "flex",
-                  justifyContent: "center",
-                  margin: "15px 0px",
-                  alignItems: "center",
-                }}
-              >
-                <Container
-                  sx={{
-                    background: "transparent",
-                    width: "220px",
-                    height: "115px",
-                    borderRadius: "10px",
-                    backgroundColor: "rgb(0 0 0 / 13%)",
-                    backdropFilter: "blur(8px)",
-                    padding: "10px 0px",
-                  }}
-                >
-                  <img
-                    src={solana_trend}
-                    alt="logo"
-                    style={{
-                      padding: isSmScreen ? "0px 10px" : "0px",
-                      width: "150px",
-                      marginBottom: "10px",
-                    }}
-                  />
-                  <Grid
-                    container
-                    sx={{ padding: isSmScreen ? "0px 10px" : "0px" }}
-                  >
-                    <Grid item xs={6} sm={6} md={6} lg={6}>
-                      <Typography
-                        variant="h6"
-                        sx={{
-                          fontFamily: "Roboto",
-                          fontSize: "16px",
-                          lineHeight: "1.2",
-                          color: "black",
-                        }}
-                      >
-                        $
-                        {coinsData && coinsData[0] && coinsData[0].price
-                          ? (coinsData[3]?.price).toFixed(4)
-                          : "$43000"}
-                      </Typography>
-
-                      <Typography
-                        variant="h6"
-                        sx={{
-                          fontFamily: "Roboto",
-                          fontSize: "12px",
-                          color: "rgb(46 46 46 / 60%)",
-                          lineHeight: "1.2",
-                        }}
-                      >
-                        {coinsData && coinsData[0] && coinsData[0].change
-                          ? (coinsData[3]?.change).toFixed(4)
-                          : "$43000"}
-                        %
-                      </Typography>
-                    </Grid>
-                    <Grid item xs={6} sm={6} md={6} lg={6}>
-                      <img
-                        src={usdt_chart}
-                        alt="logo"
-                        style={{ width: "100px" }}
-                      />
-                    </Grid>
-                  </Grid>
-                </Container>
-              </Grid>
-            </Grid>
-          </Container>
-        </Box>
 
         {/* --------------------------------------  Video  ------------------------------------------ */}
         <Box
@@ -2027,7 +1577,7 @@ function Homepage({ callback }) {
 
         {/* --------------------------------------  Live Market Data  ------------------------------------------ */}
 
-        <Box
+        {/* <Box
           sx={{
             width: "100%",
             height: "100%",
@@ -2066,7 +1616,6 @@ function Homepage({ callback }) {
             </Typography>
           </Container>
 
-          {/* Pool table */}
 
           <Container
             sx={{
@@ -2200,31 +1749,7 @@ function Homepage({ callback }) {
                               />
                             </TableCell>
                             <TableCell>
-                              {/* <Box
-                                sx={{
-                                  width: "100%",
-                                  display: "flex",
-                                  flexDirection: "row",
-                                  marginTop: "10px",
-                                  justifyContent: "center",
-                                }}
-                              >
-                                <Typography
-                                  sx={{
-                                    fontFamily: "Roboto",
-                                    fontSize: "12px",
-                                    color: "#B982FF",
-                                    lineHeight: "1.2",
-                                    paddingTop: "5px",
-                                    cursor: "pointer",
-                                  }}
-                                >
-                                  Trade Now
-                                </Typography>
-                                <ArrowRightAltIcon
-                                  sx={{ marginLeft: "5px", color: "#B982FF" }}
-                                />
-                              </Box> */}
+                              
                             </TableCell>
                           </TableRow>
                         ) : null
@@ -2235,8 +1760,460 @@ function Homepage({ callback }) {
               </TableContainer>
             </div>
           </Container>
-        </Box>
+        </Box> */}
 
+
+        {/* --------------------------------------  Market Trends  ------------------------------------------ */}
+
+        <Box
+          sx={{
+            width: "100%",
+            height: "100%",
+            position: "relative",
+            bottom: isXlScreen ? "0px" : "0px",
+            margin: "50px 0px",
+          }}
+        >
+          <Typography
+            variant="h6"
+            sx={{
+              fontFamily: "Mackinac",
+              fontSize: isSmScreen ? "26px" : "40px",
+              fontWeight: "bold",
+              background: `linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)`,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              textAlign: "center",
+              lineHeight: "1.2",
+              width: "fit-content",
+              margin: "10px auto",
+            }}
+          >
+            Market Trend
+          </Typography>
+          <Container
+            sx={{
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Grid
+              container
+              sx={{
+                width: "80%",
+                height: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={6}
+                lg={4}
+                sx={{
+                  height: "100%",
+                  color: "white",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  margin: "15px 0px",
+                }}
+              >
+                <Container
+                  sx={{
+                    background: "transparent",
+                    width: "220px",
+                    height: "115px",
+                    borderRadius: "10px",
+                    backgroundColor: "rgb(0 0 0 / 13%)",
+                    backdropFilter: "blur(8px)",
+                    padding: "10px 0px",
+                  }}
+                >
+                  <img
+                    src={btc_trend}
+                    alt="logo"
+                    style={{
+                      padding: isSmScreen ? "0px 10px" : "0px",
+                      width: "150px",
+                      marginBottom: "10px",
+                    }}
+                  />
+                  <Grid
+                    container
+                    sx={{ padding: isSmScreen ? "0px 10px" : "0px" }}
+                  >
+                    <Grid item xs={6} sm={6} md={6} lg={6}>
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          fontFamily: "Roboto",
+                          fontSize: "16px",
+                          lineHeight: "1.2",
+                          color: "black",
+                        }}
+                      >
+                        $
+                        {coinsData && coinsData[0] && coinsData[0].price
+                          ? (coinsData[0]?.price).toFixed(4)
+                          : "43000"}
+                      </Typography>
+
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          fontFamily: "Roboto",
+                          fontSize: "12px",
+                          color: "rgb(46 46 46 / 60%)",
+                          lineHeight: "1.2",
+                        }}
+                      >
+                        {coinsData && coinsData[0] && coinsData[0].price
+                          ? (coinsData[0]?.change).toFixed(6)
+                          : "1.41"}
+                        %{/* 1.41% */}
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={6} sm={6} md={6} lg={6}>
+                      <img
+                        src={btc_chart}
+                        alt="logo"
+                        style={{ width: "100px" }}
+                      />
+                    </Grid>
+                  </Grid>
+                </Container>
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={6}
+                lg={4}
+                sx={{
+                  height: "100%",
+                  color: "white",
+                  display: "flex",
+                  justifyContent: "center",
+                  margin: "15px 0px",
+                  alignItems: "center",
+                }}
+              >
+                <Container
+                  sx={{
+                    background: "transparent",
+                    width: "220px",
+                    height: "115px",
+                    borderRadius: "10px",
+                    backgroundColor: "rgb(0 0 0 / 13%)",
+                    backdropFilter: "blur(8px)",
+                    padding: "10px 0px",
+                  }}
+                >
+                  <img
+                    src={eth_trend}
+                    alt="logo"
+                    style={{
+                      padding: isSmScreen ? "0px 10px" : "0px",
+                      width: "150px",
+                      marginBottom: "10px",
+                    }}
+                  />
+                  <Grid
+                    container
+                    sx={{ padding: isSmScreen ? "0px 10px" : "0px" }}
+                  >
+                    <Grid item xs={6} sm={6} md={6} lg={6}>
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          fontFamily: "Roboto",
+                          fontSize: "16px",
+                          lineHeight: "1.2",
+                          color: "black",
+                        }}
+                      >
+                        $
+                        {coinsData && coinsData[0] && coinsData[0].price
+                          ? (coinsData[1]?.price).toFixed(4)
+                          : "43000"}
+                      </Typography>
+
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          fontFamily: "Roboto",
+                          fontSize: "12px",
+                          color: "rgb(46 46 46 / 60%)",
+                          lineHeight: "1.2",
+                        }}
+                      >
+                        {coinsData && coinsData[0] && coinsData[0].price
+                          ? (coinsData[1]?.change).toFixed(6)
+                          : "1.41"}
+                        %
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={6} sm={6} md={6} lg={6}>
+                      <img
+                        src={eth_chart}
+                        alt="logo"
+                        style={{ width: "100px" }}
+                      />
+                    </Grid>
+                  </Grid>
+                </Container>
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={6}
+                lg={4}
+                sx={{
+                  height: "100%",
+                  color: "white",
+                  display: "flex",
+                  justifyContent: "center",
+                  margin: "15px 0px",
+                  alignItems: "center",
+                }}
+              >
+                <Container
+                  sx={{
+                    background: "transparent",
+                    width: "220px",
+                    height: "115px",
+                    borderRadius: "10px",
+                    backgroundColor: "rgb(0 0 0 / 13%)",
+                    backdropFilter: "blur(8px)",
+                    padding: "10px 0px",
+                  }}
+                >
+                  <img
+                    src={xrp_trend}
+                    alt="logo"
+                    style={{
+                      padding: isSmScreen ? "0px 10px" : "0px",
+                      width: "150px",
+                      marginBottom: "10px",
+                    }}
+                  />
+                  <Grid
+                    container
+                    sx={{ padding: isSmScreen ? "0px 10px" : "0px" }}
+                  >
+                    <Grid item xs={6} sm={6} md={6} lg={6}>
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          fontFamily: "Roboto",
+                          fontSize: "16px",
+                          lineHeight: "1.2",
+                          color: "black",
+                        }}
+                      >
+                        $
+                        {coinsData && coinsData[0] && coinsData[0].price
+                          ? (coinsData[4]?.price).toFixed(4)
+                          : "$43000"}
+                      </Typography>
+
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          fontFamily: "Roboto",
+                          fontSize: "12px",
+                          color: "rgb(46 46 46 / 60%)",
+                          lineHeight: "1.2",
+                        }}
+                      >
+                        {coinsData && coinsData[0] && coinsData[0].change
+                          ? (coinsData[4]?.change).toFixed(4)
+                          : "$43000"}
+                        %
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={6} sm={6} md={6} lg={6}>
+                      <img
+                        src={bnb_chart}
+                        alt="logo"
+                        style={{ width: "100px" }}
+                      />
+                    </Grid>
+                  </Grid>
+                </Container>
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={6}
+                lg={4}
+                sx={{
+                  height: "100%",
+                  color: "white",
+                  display: "flex",
+                  justifyContent: "center",
+                  margin: "15px 0px",
+                  alignItems: "center",
+                }}
+              >
+                <Container
+                  sx={{
+                    background: "transparent",
+                    width: "220px",
+                    height: "115px",
+                    borderRadius: "10px",
+                    backgroundColor: "rgb(0 0 0 / 13%)",
+                    backdropFilter: "blur(8px)",
+                    padding: "10px 0px",
+                  }}
+                >
+                  <img
+                    src={usdt_trend}
+                    alt="logo"
+                    style={{
+                      padding: isSmScreen ? "0px 10px" : "0px",
+                      width: "150px",
+                      marginBottom: "10px",
+                    }}
+                  />
+                  <Grid
+                    container
+                    sx={{ padding: isSmScreen ? "0px 10px" : "0px" }}
+                  >
+                    <Grid item xs={6} sm={6} md={6} lg={6}>
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          fontFamily: "Roboto",
+                          fontSize: "16px",
+                          lineHeight: "1.2",
+                          color: "black",
+                        }}
+                      >
+                        $
+                        {coinsData && coinsData[0] && coinsData[0].price
+                          ? (coinsData[2]?.price).toFixed(4)
+                          : "$43000"}
+                      </Typography>
+
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          fontFamily: "Roboto",
+                          fontSize: "12px",
+                          color: "rgb(46 46 46 / 60%)",
+                          lineHeight: "1.2",
+                        }}
+                      >
+                        {coinsData && coinsData[0] && coinsData[0].change
+                          ? (coinsData[2]?.change).toFixed(4)
+                          : "$43000"}
+                        %
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={6} sm={6} md={6} lg={6}>
+                      <img
+                        src={usdt_chart}
+                        alt="logo"
+                        style={{ width: "100px" }}
+                      />
+                    </Grid>
+                  </Grid>
+                </Container>
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={6}
+                lg={4}
+                sx={{
+                  height: "100%",
+                  color: "white",
+                  display: "flex",
+                  justifyContent: "center",
+                  margin: "15px 0px",
+                  alignItems: "center",
+                }}
+              >
+                <Container
+                  sx={{
+                    background: "transparent",
+                    width: "220px",
+                    height: "115px",
+                    borderRadius: "10px",
+                    backgroundColor: "rgb(0 0 0 / 13%)",
+                    backdropFilter: "blur(8px)",
+                    padding: "10px 0px",
+                  }}
+                >
+                  <img
+                    src={solana_trend}
+                    alt="logo"
+                    style={{
+                      padding: isSmScreen ? "0px 10px" : "0px",
+                      width: "150px",
+                      marginBottom: "10px",
+                    }}
+                  />
+                  <Grid
+                    container
+                    sx={{ padding: isSmScreen ? "0px 10px" : "0px" }}
+                  >
+                    <Grid item xs={6} sm={6} md={6} lg={6}>
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          fontFamily: "Roboto",
+                          fontSize: "16px",
+                          lineHeight: "1.2",
+                          color: "black",
+                        }}
+                      >
+                        $
+                        {coinsData && coinsData[0] && coinsData[0].price
+                          ? (coinsData[3]?.price).toFixed(4)
+                          : "$43000"}
+                      </Typography>
+
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          fontFamily: "Roboto",
+                          fontSize: "12px",
+                          color: "rgb(46 46 46 / 60%)",
+                          lineHeight: "1.2",
+                        }}
+                      >
+                        {coinsData && coinsData[0] && coinsData[0].change
+                          ? (coinsData[3]?.change).toFixed(4)
+                          : "$43000"}
+                        %
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={6} sm={6} md={6} lg={6}>
+                      <img
+                        src={usdt_chart}
+                        alt="logo"
+                        style={{ width: "100px" }}
+                      />
+                    </Grid>
+                  </Grid>
+                </Container>
+              </Grid>
+            </Grid>
+          </Container>
+        </Box>
+        
         {/* --------------------------------------  Integrations  ------------------------------------------ */}
 
         <Box

@@ -72,7 +72,11 @@ function Pool_function() {
         // justifyContent: "center",
         flexDirection: "column",
         // alignItems:"center",
-        overflowY: "visible",
+        overflowY: "scroll",
+        '&::-webkit-scrollbar': {
+          display: 'none', // Hide scrollbar for Chrome, Safari, and Edge
+        },
+        scrollbarWidth: 'none', // Hide scrollbar for Firefox
       }}
     >
       {!isMdScreen ? (
@@ -304,7 +308,8 @@ function Pool_function() {
 
         <Box
           sx={{
-            backgroundColor: "rgb(0 0 0 / 13%)",
+            // backgroundColor: "rgb(0 0 0 / 13%)",
+            backgroundColor: "#f0ffff75",
             borderRadius: "10px",
             border: "2px solid #2B2C3B",
             width: "90%",
@@ -552,7 +557,7 @@ function Pool_function() {
                               fontSize: "11px",
                             }}
                           >
-                            Add Liquidity
+                            STAKE 
                           </button>
                           <LockIcon style={{ color: "#B102CD" }} />
                         </Box>

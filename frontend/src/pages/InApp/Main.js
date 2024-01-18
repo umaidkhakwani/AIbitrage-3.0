@@ -105,7 +105,7 @@ function Main() {
   `;
   const TabItem = styled.div`
     padding: 10px 20px;
-    font-family: "Aclonica", sans-serif;
+    font-family: "Mackinac";
     color: ${({ selected }) => (selected ? "#50A883" : "#861E85")};
     cursor: pointer;
     transition: color 0.3s ease;
@@ -532,6 +532,8 @@ function Main() {
             // backgroundRepeat: "no-repeat",
             // background: "#FFF7F2",
             margin: 0,
+            background: "#9c79ae96",
+
             padding: 0,
             willChange: "transform", // Add will-change property
             // position: "relative",
@@ -678,8 +680,8 @@ function Main() {
                     background: `linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)`,
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
-                    margin:"0px auto",
-                    width:"fit-content",
+                    margin: "0px auto",
+                    width: "fit-content",
                     fontSize: "16px",
                     textAlign: "center",
                   }}
@@ -795,7 +797,7 @@ function Main() {
                               "linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)",
                             borderRadius: "20px",
                             border: "none",
-                            fontFamily: "Aclonica",
+                            fontFamily: "Mackinac",
                             width: "100px",
                             height: "30px",
                             cursor: "pointer",
@@ -867,7 +869,8 @@ function Main() {
                       justifyContent: "center",
                       alignItems: "center",
                       // background: "white",
-                      width: "60%",
+                      width: isMdScreen ? "100px" : "130px",
+                      height: isMdScreen ? "30px" : "40px", // Set the height to match the image height
                       borderRadius: "7px",
                       cursor: "pointer",
                       margin: "2px",
@@ -878,8 +881,8 @@ function Main() {
                   >
                     <Typography
                       style={{
-                        fontFamily: "Aclonica",
-                        fontSize: "12px",
+                        fontFamily: "Mackinac",
+                        fontSize: "14px",
                         color: "#ffff",
                       }}
                     >

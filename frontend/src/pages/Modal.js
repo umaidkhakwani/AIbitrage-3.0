@@ -33,7 +33,7 @@ const ModalComponent = () => {
           alignItems: "center",
           justifyContent: "center",
           // backgroundColor: "black",
-          backgroundColor: "rgb(255 255 255 / 43%)",
+          backgroundColor: "rgb(0 0 0 / 53%)",
 
           color: "black",
           border: "none",
@@ -91,12 +91,12 @@ const ModalComponent = () => {
             textAlign: "justify",
           }}
         >
-          Welcome to our website! To ensure the best possible experience, we
+          Welcome to our website<span style={{fontFamily:"Lora"}}>!</span> To ensure the best possible experience, we
           use cookies. These are used to personalize content, provide social
-          media features, and analyze our traffic. By clicking 'Accept,' you
+          media features, and analyze our traffic. By clicking <span style={{fontFamily:"Lora"}}>'Accept,'</span> you
           consent to our use of cookies. You can also manage your cookie
-          preferences by selecting 'Cookie Settings.' For more information,
-          please read our Cookie Policy. Thank you for visiting!
+          preferences by selecting <span style={{fontFamily:"Lora"}}>'Cookie Settings.'</span> For more information,
+          please read our Cookie Policy. Thank you for visiting<span style={{fontFamily:"Lora"}}>!</span>
         </Typography>
 
         <div

@@ -108,7 +108,12 @@ function Header_Function() {
   `;
 
   const handleTabClick = (tab) => {
+    if (tab === 2) {
+      window.open('https://docs.google.com/document/d/1HnYTFt-G6A_wqFfYaVwhHRJ35lAdhLcwO8ybLyveT7s/edit', '_blank');
+    }
+    console.log("tab", tab);
     setActiveTab(tab);
+    setValue(tab);
   };
 
   console.log("value", value);
@@ -141,7 +146,8 @@ function Header_Function() {
 
   const getTabName = (index) => {
     // Map index to tab names based on your logic
-    const tabNames = ["About", "Docs", "Dashboard"];
+    const tabNames = ["About", "Docs", "Whitepaper","Dashboard"];
+
     return tabNames[index];
   };
 
@@ -287,9 +293,10 @@ function Header_Function() {
                       },
                     }}
                   >
-                    {[0, 1, 2].map((index) => (
+                    {[0, 1, 2, 3].map((index) => (
                       <MenuItem
                         key={index}
+                        onClick={() => handleTabClick(index)}
                         sx={{
                           display: "flex",
                           justifyContent: "center",
@@ -300,7 +307,7 @@ function Header_Function() {
                         }}
                       >
                         <div>{getTabName(index)}</div>
-                        {(index === 2 ) && (
+                        {(index === 3 ) && (
                           <LockIcon style={{ color: "#B102CD" }} />
                         )}
                       </MenuItem>
@@ -322,9 +329,14 @@ function Header_Function() {
                     Docs
                   </TabItem>
                   <TabItem
+                  onClick={() => window.open('https://docs.google.com/document/d/1HnYTFt-G6A_wqFfYaVwhHRJ35lAdhLcwO8ybLyveT7s/edit', '_blank')}
+                  >
+                    Whitepaper
+                  </TabItem>
+                  <TabItem
                     selected={activeTab === "Dashboard"}
                     disabled={true}
-                    onClick={() => handleChange(null, 2)}
+                    onClick={() => handleChange(null, 3)}
                   >
                     Dashboard
                     {/** Lock icon for the disabled "Swap" tab */}

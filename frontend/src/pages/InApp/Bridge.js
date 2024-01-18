@@ -10,7 +10,8 @@ import {
 } from "@mui/material";
 
 import Bridge from "../../images/Bridge.png";
-import bridge_transfer from "../../images/bridge_transfer.png";
+import bridge_transfer2 from "../../images/bridge_transfer.png";
+import bridge_transfer from "../../images/3.0/bridge_transfer.svg";
 import coin1 from "../../images/coin1.png";
 import coin2 from "../../images/coin2.png";
 import arrow from "../../images/arrow.png";
@@ -242,6 +243,7 @@ function Bridge_function() {
           display: "flex",
           justifyContent: "center",
           flexDirection: "row",
+
         }}
       >
         {/* <Box
@@ -265,7 +267,8 @@ function Bridge_function() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              background: "rgba(0, 0, 0, 0.20)", // Transparent background with 0.25 opacity
+              background: "rgba(255, 255, 255, 0.40)", // Transparent background with 0.25 opacity
+
               width: isSmScreen ? "300px" : isMdScreen ? "500px" : "500px",
               height: isSmScreen ? "380px" : "350px",
               borderRadius: "20px",
@@ -331,7 +334,7 @@ function Bridge_function() {
                   <img
                     src={bridge_transfer}
                     alt="bridge_transfer"
-                    style={{ width: "33px", height: "33px" }}
+                    style={{ width: "20px", height: "20px", background:"white", padding:"5px 5px", borderRadius:"100%", border:"3px solid #50A883" }}
                   />
                   <img
                     src={polygon_right}
@@ -949,7 +952,8 @@ function Bridge_function() {
               justifyContent: "center",
               alignItems: "center",
               flexDirection: "column",
-              background: "rgba(0, 0, 0, 0.20)", // Transparent background with 0.25 opacity
+              background: "rgba(255, 255, 255, 0.40)", // Transparent background with 0.25 opacity
+
               width: isSmScreen ? "300px" : isMdScreen ? "500px" : "500px",
               height: isSmScreen ? "150px" : "150px",
               borderRadius: "20px",

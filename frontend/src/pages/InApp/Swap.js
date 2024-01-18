@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 
 import Bridge from "../../images/Bridge.png";
-import transfer from "../../images/transfer_new.png";
+import transfer from "../../images/transfer_new.svg";
 import coin1 from "../../images/coin1.png";
 import btc from "../../images/btc.png";
 import usdt from "../../images/usdt.png";
@@ -206,7 +206,7 @@ function Swap_function() {
           justifyContent: "center",
           alignItems: "center",
           // background: "rgba(255, 255, 255, 0.90)", // Transparent background with 0.25 opacity
-          background: "rgba(0, 0, 0, 0.20)", // Transparent background with 0.25 opacity
+          background: "rgba(255, 255, 255, 0.40)", // Transparent background with 0.25 opacity
           width: isSmScreen ? "300px" : isMdScreen ? "400px" : "500px",
           height: isSmScreen ? "445px" : "500px",
           borderRadius: "20px",
@@ -223,7 +223,14 @@ function Swap_function() {
           style={{
             position: "absolute",
             top: "50%",
-            left: "50%",
+            left: "45%",
+            width: "20px",
+            height: "20px",
+            background: "white",
+            padding: "5px 5px",
+            borderRadius: "100%",
+            border: "3px solid #50A883",
+            rotate: "90deg",
             transform: "translate(-50%, -50%)",
             zIndex: "2", // Ensure the image is above other elements
             cursor: "pointer",
@@ -762,7 +769,8 @@ function Swap_function() {
                 borderRadius: "7px",
                 border: "none",
                 // background: "#50A883",
-                background:"linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)",
+                background:
+                  "linear-gradient(86deg, #861E85 6.15%, #F55AA3 51.84%, #25D366 96.08%)",
                 color: "#ffff",
                 fontFamily: "Mackinac",
                 fontSize: "12px",
